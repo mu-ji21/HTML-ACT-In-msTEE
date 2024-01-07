@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+footer {
+            background-color: #333;
+            color: white;
+            padding: 3px;
+            bottom: 0;
+            width: 100%;
+        }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span></button>
+
+    <a class="navbar-brand" href="#"><img src="logo.jpeg" alt="cpsu logo" style="width:40px;" class="rounded-pill"> Central Philippines State University</a>
+  
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="courses.html">COURSES</a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="about.html">ABOUT</a>
+        </li>    
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1 style="text-align:center">Gallery Of Central Philippines State University</h1>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="gallery1.jpeg" style="width:100%">
+  </div>
+<div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="gallery2.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="gallery8.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="gallery4.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="gallery5.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="home1.jpeg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+<div class="row">
+    <div class="column">
+      <img class="demo cursor" src="gallery1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Central Philippine State University">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="gallery2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Central Philippine State University">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="gallery8.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Central Philippine State University">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="gallery4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Central Philippine State University">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="gallery5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Central Philippine State University">
+    </div>    
+<div class="column">
+      <img class="demo cursor" src="home1.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Central Philippine State University">
+    </div>
+  </div>
+</div>
+<p style="text-align:center">A gallery of pictures is a visual feast that transcends the boundaries of time and space, inviting viewers into a world of colors, emotions, and narratives frozen in frames. Each picture tells a story, capturing a fleeting moment or a profound emotion, and collectively, they create a mosaic that reflects the diversity of human experiences.</p>
+
+<p style="text-align:center">In a gallery of pictures, the curator’s selection and arrangement play a crucial role. The juxtaposition of images can evoke powerful connections and narratives, leading viewers on a visual journey that transcends individual photographs. The carefully curated gallery transforms a collection of pictures into an immersive experience, where themes emerge, and stories unfold with each step.</p>
+
+<p style="text-align:center">Beyond aesthetics, a gallery of pictures can also serve educational purposes. It can document historical events, showcase cultural nuances, and shed light on societal issues. Viewers are not only aesthetically engaged but also intellectually stimulated, prompting reflection and dialogue.</p>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+ for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+     <footer>
+<p>&copy; 2024 PAUL JAY DOLOSO. All rights reserved.</p>
+</footer>
+</body>
+</html>
